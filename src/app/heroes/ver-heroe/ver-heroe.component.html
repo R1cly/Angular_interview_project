@@ -1,0 +1,8 @@
+<div class="card mt-3 m-3" style="width: 18rem;" *ngFor="let heroe of retornarHeroe">
+  <img class="card-img-top" src="{{heroe.img}}">
+  <div class="card-body">
+    <h5 class="card-title">{{heroe.nombre}}</h5>
+    <p class="card-text">{{heroe.nombre}} apareció por primera vez el {{heroe.aparicion | date: 'dd/MM/yyyy'}} en la famosa compañia de comics {{ heroe.casa }}</p>
+    <a [routerLink]="['']" class="btn btn-primary">Ir a menu principal</a>
+  </div>
+</div>

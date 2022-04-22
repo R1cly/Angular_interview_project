@@ -1,0 +1,51 @@
+<div class="d-flex">
+    <div class="container">
+      <div class="row p-3">
+        <div class="col">
+          <h5>Buscar heroe:</h5>
+
+          <form (ngSubmit)="filtro">
+          <input 
+        type="text" 
+        placeholder="Nombre" 
+        name="nombre"
+        [(ngModel)]="filtro"/>
+
+        <button type="submit">Agregar</button>
+
+        </form>
+        </div>
+      </div>
+      <hr>
+    <div class="row">
+
+      <table id="tablaResultados" class="table table-striped mt-3">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Casa</th>
+        <th scope="col">Aparición</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let personaje of personajesPorFiltro()">
+        
+        <td>{{personaje.nombre}}</td>
+        <td>{{personaje.casa}}</td>
+        <td>{{personaje.aparicion | date: 'dd/MM/yyyy'}}</td>
+
+        <td>
+          <a class="text-decoration-none" [routerLink]="['/ver-heroe', personaje.nombre]">
+          <button id="botonHeroe" class="btn btn-dark">Ver personaje</button>
+          </a>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+
+      
+    </div>
+  </div>
+</div>
+  
