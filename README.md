@@ -1,4 +1,13 @@
-# AngularFase2Entrevista
+# Angular Interview Example
+
+This project was made with Angular 12.1.1.
+Developed by Ricardo Sevilla Climent.
+
+# Project summary.
+
+This is a simple SPA made with Angular, in this project you sould be able to filter Heroes by name or company.
+
+The data we recive is a Mock that simulates a API request.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
